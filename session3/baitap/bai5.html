@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+        <label for="username">Họ và tên :</label>
+        <input type="text" name="username" id="username"><br>
+        <label for="time">chọn ngày giờ</label>
+        <input type="datetime-local" name="date-time" id="time"><br>
+        <p>Loại dịch vụ :
+            <select name="service" id="service">
+                <option value="selected">Tư vấn</option>
+                <option value="">Hỗ trợ</option>
+            </select>
+        </p><br>
+        <p>
+            Ghi chú :
+            <textarea name="note" id="note" rows="5"></textarea>
+        </p>
+        <button>Đặt lịch</button>
+
+    </form>
+</body>
+</html>

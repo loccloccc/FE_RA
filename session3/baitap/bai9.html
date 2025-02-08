@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+        <label for="name"><b>Họ và tên :</b></label>
+        <input type="text" name="name" id="name"><br>
+        <label for="ngaysinh"><b>Ngày sinh :</b></label>
+        <input type="date" name="ngaysinh" id="ngaysinh"><br>
+        <p>
+            <b>Giới tính :</b> 
+            <input type="radio" name="gioitinh" id="0">
+            <label for="0">Nam</label>
+            <input type="radio" name="gioitinh" id="1">
+            <label for="1">Nữ</label>
+        </p>
+        <label for="SDT"><b>Số điện thoại:</b></label>
+        <input type="tel" name="SDT" id="SDT"><br>
+        <p>
+            <b>Địa chỉ :</b>
+            <textarea name="diachi" id="diachi" rows="3"></textarea>
+        </p>
+        <p>
+            <b>Vai trò trong nhóm:</b>
+            <select name="vaitro" id="vaitro">
+                <option value="selected"><b>Thành viên</b></option>
+                <option value=""><b>Quản lí</b></option>
+                <option value=""><b>Trưởng phòng</b></option>
+            </select>
+        </p>
+        <label for="sothich"><b>Sở thích:</b></label>
+        <input type="text" name="sothich" id="sothich"><br>
+        <p>
+            <b>Kỹ năng:</b>
+            <textarea name="kynang" id="kynang" rows="3"></textarea>
+        </p>
+        <p>
+            <b>Thời gian rảnh:</b>
+            <input type="checkbox" name="thoigian" id="1">
+            <label for="sang"><b>Sáng</b></label>
+            <input type="checkbox" name="thoigian" id="2">
+            <label for="chieu"><b>Chiều</b></label>
+            <input type="checkbox" name="thoigian" id="3">
+            <label for="toi"><b>Tối</b></label>
+        </p>
+        <p>
+            <b>Lý do tham gia nhóm:</b>
+            <textarea name="lydo" id="lydo" rows="3"></textarea>
+        </p>
+        <label for="mausac"><b>Màu sắc:</b></label>
+        <input type="color" name="mausac" id="mausac"><br>
+        <p>
+            <b>Đăng ký nhận bản tin:</b>
+            <input type="checkbox" name="nhanbantin" id="nhanbantin">
+            <label for="nhanbantin"><b>Có</b></label>
+        </p>
+        <p>
+            <b>Nhận thông báo qua email:</b>
+            <input type="radio" name="thongbao" id="email">
+            <label for="thongbao">Email</label>
+            <input type="radio" name="thongbao" id="sms">
+            <label for="thongbao">SMS</label>
+        </p>
+        <button>Đăng kí thành viên</button>
+    </form>
+</body>
+</html>

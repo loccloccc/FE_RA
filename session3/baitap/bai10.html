@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+        <label for="name"><b>Họ và tên :</b></label>
+        <input type="text" name="name" id="name"><br>
+        <label for="ngaysinh"><b>Ngày sinh :</b></label>
+        <input type="date" name="ngaysinh" id="ngaysinh"><br>
+        <p>
+            <b>Giới tính :</b> 
+            <input type="radio" name="gioitinh" id="0">
+            <label for="0">Nam</label>
+            <input type="radio" name="gioitinh" id="1">
+            <label for="1">Nữ</label>
+        </p>
+        <label for="SDT"><b>Số điện thoại:</b></label>
+        <input type="tel" name="SDT" id="SDT"><br>
+        <label for="tencongty"><b>Tên công ty:</b></label>
+        <input type="text" name="ten" id="tencongty"><br>
+        <p>
+            <b>Vai trò trong công ty:</b>
+            <select name="vaitro" id="">
+                <option value=""><b>Giám đốc điều hành</b></option>
+                <option value=""><b>Chủ tịch </b></option>
+                <option value=""><b>Nhân viên</b></option>
+            </select>
+        </p>
+        <p>
+            <b>Quy mô công ty:</b>
+            <select name="quymo" id="">
+                <option value=""><b>Tập đoàn</b></option>
+                <option value="selected"><b>Doanh nghiệp nhỏ </b></option>
+                <option value=""><b>Doanh nghiệp lớn</b></option>
+            </select>
+        </p>
+        <label for="nganhnghe"><b>Ngành nghề công ty :</b></label>
+        <input type="text" name="nganhnghe" id="nganhnghe"><br>
+        <p>
+            <b>Lý do tham gia nhóm:</b>
+            <textarea name="lydo" id="lydo" rows="3"></textarea>
+        </p>
+        <p>
+            <b>Kinh nghiệm lãnh đạo:</b>
+            <textarea name="kinhnghiem" id="kinhnghiem" rows="3"></textarea>
+        </p>
+        <p>
+            <b>Mục diêu tham gia câu lạc bộ:</b>
+            <textarea name="muctieumuctieu" id="muctieu" rows="3"></textarea>
+        </p>
+        <p>
+            <b>Chương trình sự kiện mong muốn tham gia:</b>
+            <input type="checkbox" name="sukien" id="1">
+            <label for="1">Networking</label>
+            <input type="checkbox" name="sukien" id="2">
+            <label for="2">Workshop</label>
+            <input type="checkbox" name="sukien" id="3">
+            <label for="3">Hội thạo</label>
+        </p>
+        <p>
+            <b>Đăng ký nhận bản tin:</b>
+            <input type="checkbox" name="nhanbantin" id="nhanbantin">
+            <label for="nhanbantin"><b>Có</b></label>
+        </p>
+        <button>Đăng kí hội viên</button>
+</form>
+    
+</body>
+</html>
