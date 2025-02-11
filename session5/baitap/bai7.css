@@ -1,0 +1,55 @@
+*{
+    padding: 0 ;
+    margin: 0; 
+}
+.all{
+    background-color: rgb(244, 244, 244);
+}
+.table{
+    border-collapse: collapse;
+    width: 98%;
+    height: 200px;
+    margin-left: 18px;
+}
+.h1{
+    color: rgb(61, 78, 93);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.head{
+    background-color: rgb(2, 123, 255);
+    height: 35px;
+    text-align: center;
+}
+.body-tr{
+    text-align: center;
+}
+.view{
+    background-color: rgb(40, 167, 69);
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.update{
+    background-color: rgb(255, 193, 9) ;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.delete{
+    background-color:  rgb(220, 53, 69);
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.id{
+    width: 30px;
+}
+.body-tr2{
+    background-color:rgb(255, 255, 255);
+}

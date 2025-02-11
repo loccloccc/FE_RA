@@ -1,0 +1,28 @@
+*{
+    padding:0;
+    margin:0; 
+}
+.all{
+    background-color: rgb(241, 234, 234);
+}
+.title{
+    text-align: center;
+
+}
+.table{
+    border-collapse: collapse;
+    width: 98%;
+    height: 200px;
+    text-align: center;
+    margin-left: 15px;
+}
+.tr{
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+.tr2{
+    background-color: white;
+}
+
+

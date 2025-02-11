@@ -1,0 +1,21 @@
+/* 
+reset css
+ */
+*{
+    padding:0;
+    margin:0;
+}
+
+.title{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.content{
+    text-align: center;
+    text-decoration-style:dotted;
+}
+.image{
+    /* background-color: red; */
+    text-align: center;
+}

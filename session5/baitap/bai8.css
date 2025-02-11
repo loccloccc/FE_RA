@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.table{
+    width: 100%;
+    
+}
+.h1{
+    border-bottom-style: dashed  ;
+    color: gray;
+    
+}
+.image{
+    padding-left: 15px;
+    padding-top: 15px;
+
+    
+}
+.td1{
+    
+    margin-bottom: 15px;
+    
+    
+}
+
+.vach{
+    border-left-style: solid ;
+    color:gray;
+    padding-top: -0.5%;
+    padding-bottom: -0.5%;
+}
+.image2{
+    padding-left: 15px;
+    padding-top: 5px;
+    
+}
+.thoigian{
+    color: gray;
+}
+.content{
+    color: rgb(36, 24, 82);
+}

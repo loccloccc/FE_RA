@@ -1,0 +1,24 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+.table{
+    width: 100%;
+    height: 100px;
+}
+
+.image{
+    padding-left: 20px;
+}
+.content{
+    padding-bottom: 150px;
+    padding-left: 50px;
+}
+.gio{
+    opacity: 0.5;
+}
+b{
+    color: black;
+}
