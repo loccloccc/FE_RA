@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+}
+
+.content {
+    background-color: rgb(240, 240, 240);
+    padding-top: 200px;
+    width: 300px;
+    margin: auto;
+    height: 400px;
+}
+
+.content .main {
+    background-color: white;
+    border-radius: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sign{
+    padding-bottom: 30px;
+}
+.key{
+    padding-right: 140px;
+}
+.key2{
+    padding-right: 120px;
+}
+.key3{
+    padding-right: 100px;
+}
+.line{
+    
+    line-height: 30px;
+}
+.button{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: blue;
+    border: 0px ;
+    border-radius: 5px;
+}
