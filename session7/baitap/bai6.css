@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aqua;
+}
+
+.container {
+    background-color: white;
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.container .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: beige;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid gray;
+
+}
+
+.container .header .title {
+    padding-left: 30px;
+    display: inline-block;
+    width: 90%;
+}
+
+.container .header .icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container .main {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: red;
+    width: 100%;
+    border: 2px solid gray;
+
+}
+
+.container .main .title {
+    padding-left: 30px;
+    display: inline-block;
+    width: 90%;
+}
+.container .main .icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.container .footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: blue;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid gray;
+}
+
+.container .footer .title {
+    padding-left: 30px;
+    display: inline-block;
+    width: 90%;
+}
+.container .footerfooter .icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.container .content{
+    padding: 15px 30px 15px 30px;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+
+}
+.a{
+    color: purple;
+}

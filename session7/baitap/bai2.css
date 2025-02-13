@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(140, 146, 124);
+    font-size: 15px;
+}
+.container{
+    text-align: center;
+}
+.container .header{
+    margin: 30px;
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 15px;
+    border: 2px solid gray;
+}
+.title{
+    color: rgb(192, 48, 54);
+    padding-top: 15px;
+}
+.content{
+    color: rgb(60, 48, 100);
+    padding-top: 20px;
+}
+
+.main .col{
+    margin-left: -10px;
+}

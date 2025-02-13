@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    background-color: white;
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.header .image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.header .content {
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container .main {
+    margin-left: 15px;
+
+}
+
+.container .main .title_small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.container .main .content {
+    margin-top: 30px;
+    opacity: 0.8;
+}

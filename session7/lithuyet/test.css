@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-color: rgb(98, 238, 98);
+    color: white;
+    height: 60px;
+    line-height: 60px;
+}
+.header .logo{
+    display: inline-block;
+    width: 75%;
+    padding-left: 20px;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+
+}
