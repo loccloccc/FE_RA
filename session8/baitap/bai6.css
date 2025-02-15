@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    background-color: aqua;
+}
+input{
+    width: 600px;
+    height: 50px;
+    border: 0px solid gray;
+    border-radius: 50px;
+}
+.search{
+    position: absolute;
+    left: 495px;
+    top: 16px;
+}
+::placeholder{
+    padding-left: 70px;
+}
+.mic{
+    position: absolute;
+    top: 16px;
+    right: 550px;
+}
+.camera{
+    position: absolute;
+    top: 16px;
+    right: 510px;
+}

@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aqua;
+    color: gray;
+}
+
+.container {
+    background-color:rgb(227, 222, 222);
+    width: 490px;
+    height: 450px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;    
+}
+
+.header .title{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.header .content{
+    padding-bottom: 30px;
+}
+.gach{
+    border: 1px solid rebeccapurple;
+    width: 100px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+.button2{
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 12px 30px 12px 30px ;
+    border-radius: 10px;
+    border: 0px ;
+    color: gray;
+}
+input{
+    width: 120px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    padding-left: 30px;
+    border: 0px solid blue;
+}
+.download{
+    position: absolute;
+    left: 650px;
+    bottom: 540px;
+    color: white;
+}
+.main{
+    padding-bottom: 50px;
+    border-bottom: 2px solid gray;
+}
+.footer{
+    padding-top: 30px;
+}
+.footer .icon i {
+    padding: 20px;
+    font-size: 25px;  
+    opacity: 0.5;
+}
+.footer .content{
+    opacity: 0.5;
+}

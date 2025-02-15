@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    line-height: 40px;
+}
+
+.container .time {
+    padding: 15px;
+    color: rgb(201, 197, 197);
+
+}
+
+.container .title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 25px;
+}
+
+.container .content {
+    padding: 10px 20px 10px 20px;
+}
+
+.container .button {
+    padding: 10px 15px 10px 15px;
+    margin: 20px 0px 20px 0px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .row1 {
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+.container .row2 {
+    border-top: 2px solid gray;
+
+}
+
+table {
+    border-right: 2px solid black;
+    border-collapse: collapse;
+}
