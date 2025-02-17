@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 150px;
+}
+
+.container .row1,
+.container .row2 {
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+}
+
+.container .row1 div,
+.container .row2 div {
+    width: 80px;
+    height: 50px;
+    background-color: rgb(248, 0, 252);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.container .row2 {
+    justify-content: space-between;
+    margin-top: -30px;
+}
+
+.container .row1 div {
+    justify-content: space-evenly;
+}
+
+.container .row2 div:nth-of-type(2) {
+    margin-right: 15px;
+}

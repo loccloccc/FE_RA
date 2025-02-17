@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    height: 130px;
+    background-color: blueviolet;
+    text-align: center;
+}
+.header h1{
+    padding: 25px;
+    color: white;
+}
+.header nav a{
+    padding: 0px 8px 0px 8px ;
+    color: white;
+    text-decoration: none;
+}
+.main .title{
+    text-align: center;
+    height: 170px;
+    background-color: beige;
+    padding-top: 70px;
+}
+.main .title p{
+    padding-top: 20px;
+}
+.main .title button{
+    margin: 17px;
+    padding: 12px 18px 12px 18px ;
+    border-radius: 5px;
+    background-color: blue;
+    border: none;
+}
+.main .content1{
+    text-align: center;
+    height: 250px;
+    background-color: aquamarine;
+}
+.main .content1 h2{
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+.main .content1 .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.main .content1 .box div{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin: 5px 10px 2px 10px;
+    line-height: 100px;
+}
+.main .content1 .name-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 555px 0px 550px ;
+    opacity: 0.6;
+}
+
+.main .content2{
+    text-align: center;
+    background-color: bisque;
+}
+.main .content2 h2{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.main .content2 p{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.footer{
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    line-height: 70px;
+}
+.footer p{
+    
+}
+
