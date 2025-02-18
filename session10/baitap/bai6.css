@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 680px;
+    height: 550px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: rgb(221, 217, 217);
+}
+.container .main{
+    margin: 5px auto;
+    width: 650px;
+    height: 310px;
+    border: 1px solid brown;
+    background-image: url('./img/bóng.jpg') ;
+    background-size: contain;
+    position: relative;
+}
+.container .main button{
+    margin: 20px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.container .main .content{
+    position: absolute;
+    bottom: 25px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: white;
+}
+.container .main .content .title{
+    font-size: 10px;
+}
+.container .footer{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.container .footer span .numb{
+    background-color: rgb(177 , 173 ,173);
+    border: none;    
+    color: white;
+    padding: 7px 10px 7px 10px ;
+    
+}
+.container .footer span .numb:hover{
+    padding: 7px 10px 7px 10px ;
+    border-radius: 50%;
+    border: none;    
+    background-color: blue;
+}
+.container .footer span .left{
+    padding: 6px 12px 6px 12px ;
+    border: none;
+    background-color: gray;
+    color: white;
+    opacity: 0.7;   
+}
+.container .footer span .right{
+    padding: 6px 12px 6px 12px ;
+    border: none;
+    background-color: rgb(59, 27, 113);
+    color: white;
+}
