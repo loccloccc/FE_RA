@@ -1,0 +1,369 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .header .tron {
+    width: 20px;
+    height: 20px;
+    background-color: azure;
+    border-radius: 50%;
+    position: absolute;
+    left: 80px;
+}
+
+.container .header .thanh i {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    display: none;
+}
+
+.container .header .thanh .thanh1 {
+    width: 100px;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    right: 70px;
+    border-radius: 10px;
+    display: none;
+}
+
+.container .header .thanh .thanh2 {
+    width: 100px;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    right: 200px;
+    border-radius: 10px;
+}
+
+.container .header .thanh .thanh3 {
+    width: 100px;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    right: 330px;
+    border-radius: 10px;
+}
+
+.container .header .thanh .thanh4 {
+    width: 100px;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    right: 460px;
+    border-radius: 10px;
+}
+.container .body .title{
+    width: 90%;
+    height: 250px;
+    background-color: aquamarine;
+    margin: 10px auto;
+}
+
+.container .body .main{
+    
+    display: flex;
+    flex-direction: row;
+    margin-left: 75px;
+    margin-right: 75px;
+    gap: 10px;
+}
+.container .body .main .a{
+    width: 25.5%;
+    height: 150px;
+    background-color: brown;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .body .content{  
+    display: flex;
+    flex-direction: row;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 10px;
+    gap: 10px;
+}
+.container .body .content .b{
+    width: 49.5%;
+    height: 190px;
+    background-color: thistle;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container .footer{
+    width: 90%;
+    height: 110px;
+    background-color: violet;
+    margin: 10px auto;
+}
+/* mays tinhs banr */
+@media screen and (max-width:1200px){
+    .container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .container .header {
+        width: 100%;
+        height: 40px;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .container .header .tron {
+        width: 20px;
+        height: 20px;
+        background-color: azure;
+        border-radius: 50%;
+        position: absolute;
+        left: 80px;
+    }
+    
+    .container .header .thanh i {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        display: none;
+    }
+    
+    .container .header .thanh .thanh1 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 70px;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    .container .header .thanh .thanh2 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 200px;
+        border-radius: 10px;
+    }
+    
+    .container .header .thanh .thanh3 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 330px;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    .container .header .thanh .thanh4 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 460px;
+        border-radius: 10px;
+        display: block;
+    }
+    .container .body .title{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: aquamarine;
+        margin: 10px auto;
+    }
+    
+    .container .body .main{
+       
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 60px;
+        margin-right: 60px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .container .body .main .a{
+        width: 49.7%;
+        height: 150px;
+        background-color: brown;
+    }
+    
+    .container .body .content{
+        
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .container .body .content .b{
+        width: 100%;
+        height: 190px;
+        background-color: thistle;
+        margin: 1px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container .footer{
+        width: 90%;
+        height: 110px;
+        background-color: violet;
+        margin: 5px auto;
+        display: flex;
+        flex-wrap:  wrap;
+        display: none;
+    }  
+}
+
+/* Dien thoai */
+@media screen and (max-width:765px){
+    .container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .container .header {
+        width: 100%;
+        height: 40px;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .container .header .tron {
+        width: 20px;
+        height: 20px;
+        background-color: azure;
+        border-radius: 50%;
+        position: absolute;
+        left: 80px;
+    }
+    
+    .container .header .thanh i {
+        position: absolute;
+        color: white;
+        right: 30px;
+        top: 15px;
+        display: block;
+    }
+    
+    .container .header .thanh .thanh1 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 70px;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    .container .header .thanh .thanh2 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 200px;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    .container .header .thanh .thanh3 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 330px;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    .container .header .thanh .thanh4 {
+        width: 100px;
+        height: 3px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 460px;
+        border-radius: 10px;
+        display: none;
+    }
+    .container .body .title{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: aquamarine;
+        margin: 10px auto;
+    }
+    
+    .container .body .main{
+       
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 37px;
+        margin-right: 37px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .container .body .main .a{
+        width: 100%;
+        height: 150px;
+        background-color: brown;
+    }
+    
+    .container .body .content{
+        
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .container .body .content .b{
+        width: 100%;
+        height: 190px;
+        background-color: thistle;
+        margin: 1px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container .footer{
+        width: 90%;
+        height: 110px;
+        background-color: violet;
+        margin: 5px auto;
+        display: flex;
+        flex-wrap:  wrap;
+        display: none;
+    }  
+}

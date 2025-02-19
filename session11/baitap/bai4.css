@@ -1,0 +1,138 @@
+/* Reset mặc định */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 10px;
+    background-color: violet;
+}
+
+/* Header */
+.container .header {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.container .header .main {
+    width: 50%;
+    height: 70px;
+    background-color: aqua;
+}
+
+/* Main Content */
+.container .main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.container .main .title {
+    width: 100%;
+    height: 300px;
+    background-color: burlywood;
+}
+
+.container .main .content {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.container .main .content .content-small {
+    width: 33.3%;
+    height: 100px;
+    background-color: rgb(71, 130, 130);
+}
+
+/* Footer */
+.container .footer {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+.container .footer .content {
+    width: 25%;
+    height: 100px;
+    background-color: yellow;
+    margin-top: 20px;
+}
+
+/* Máy tính bảng (Tablet: 768px → 1200px) */
+@media screen and (max-width: 1200px) {
+    .container{
+        background-color: violet;
+        height: 1100px;
+    }
+    .container .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .header .main {
+        width: 100%;
+    }
+
+    .container .main .content {
+        flex-direction: column;
+    }
+
+    .container .main .content .content-small {
+        width: 100%;
+    }
+    .container .footer{
+        gap: 9.5px;
+        margin-right: 15px;
+    }
+    .container .footer .content {
+        width: 49.55%;
+    }
+}
+
+/* Điện thoại (Mobile: < 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 5px;
+    }
+
+    .container .header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container .header .main {
+        width: 100%;
+        height: 50px;
+    }
+
+    .container .main .title {
+        height: 200px;
+    }
+
+    .container .main .content {
+        flex-direction: column;
+    }
+
+    .container .main .content .content-small {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container .footer {
+        flex-direction: column;
+    }
+
+    .container .footer .content {
+        width: 100%;
+        height: 50px;
+    }
+}

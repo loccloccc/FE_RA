@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+}
+
+.container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.container  .main1 .header{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+.container .main1 .content{
+    display: flex;
+    flex-direction: row;
+}
+
+.container .main1 .content .content1{
+    width: 49.6%;
+    height: 290px;
+    background-color: yellow;
+    margin: 10px 5px 5px 0px;
+}
+
+.container .main1 .content .content2{
+    width: 49.6%;
+    height: 290px;
+    background-color: yellowgreen;
+    margin: 10px 0px 5px 5px;
+}
+.container  .main2 .header{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    margin-top: 5px;
+}
+.container .main2 .content{
+    display: flex;
+    flex-direction: row;
+}
+
+.container .main2 .content .content1{
+    width: 33%;
+    height: 280px;
+    background-color: yellow;
+    margin: 10px 5px 5px 0px;
+}
+
+.container .main2 .content .content2{
+    width: 33%;
+    height: 280px;
+    background-color: yellowgreen;
+    margin: 10px 0px 5px 5px;
+}
+
+.container .main2 .content .content3{
+    width: 33%;
+    height: 280px;
+    background-color: yellowgreen;
+    margin: 10px 0px 5px 10px;
+}
+
+@media screen and (max-width:765px){
+    .container{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container  .main1 .header{
+        width: 100%;
+        height: 70px;
+        background-color: white;
+    }
+    .container .main1 .content{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container .main1 .content .content1{
+        width: 100%;
+        height: 250px;
+        background-color: yellow;
+        margin: 10px 5px 5px 0px;
+    }
+    
+    .container .main1 .content .content2{
+        width: 100%;
+        height: 250px;
+        background-color: yellowgreen;
+        margin: 10px 0px 5px 5px;
+    }
+    .container  .main2 .header{
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        margin-top: 5px;
+    }
+    .container .main2 .content{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container .main2 .content .content1{
+        width: 100%;
+        height: 250px;
+        background-color: yellow;
+        margin: 10px 5px 5px 0px;
+    }
+    
+    .container .main2 .content .content2{
+        width: 100%;
+        height: 250px;
+        background-color: yellowgreen;
+        margin: 10px 0px 5px 5px;
+    }
+    
+    .container .main2 .content .content3{
+        width: 100%;
+        height: 250px;
+        background-color: rgb(205, 143, 50);
+        margin: 10px 0px 5px 10px;
+    }
+}

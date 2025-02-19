@@ -15,9 +15,8 @@ img{
 }
 .container .col1{
     width: 765px;
-    height: 1000px;
+    height: 450px;
     margin-left: 10px;
-    border: 2px solid red;
 }
 .container .col1 .main{
     display: flex;
@@ -86,9 +85,9 @@ img{
 
 .container .col2{
     width: 725px;
-    height: 1000px;
+    height: 450px;
     margin: 2px;
-    border: 2px solid red;
+    
 }
 .container .col2 .main{
     display: flex;
@@ -102,7 +101,6 @@ img{
 }
 .a{
     width: 200px;
-    border: 1px solid green;
 }
 .container .col2 .main .club{
     margin-top: 20px;
@@ -123,7 +121,6 @@ img{
 }
 .b{
     width: 50px;
-    border: 1px solid green;
 }
 .container .col2 .main .hieuso{
     display: flex;
