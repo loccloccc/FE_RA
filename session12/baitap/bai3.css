@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form{
+    margin: 50px auto;
+    width: 30%;
+    background-color: aqua;
+    height: 380px;
+    border-radius: 5px;
+}
+.container{
+    margin: 10px auto;
+}
+
+.header .title{
+    margin: 10px;
+    color: gray;
+}
+
+.container button{
+    background-color: green;
+}

@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form{
+    width: 50%;
+    margin: 40px auto;
+}
+
+.form .sex{
+    display: flex;
+    flex-direction: row;
+}
+.form button{
+    background-color: green;
+    border: none;
+}
