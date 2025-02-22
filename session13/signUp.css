@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+.header{
+    width: 1440px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray ;
+}
+
+.header .header-top{
+    height: 48px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} 
+.header .header-top .main .main-left a{
+    color: white;
+}
+.header .header-top .main .main-right{
+    position: absolute;
+    right: 150px;
+    top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.header .header-top .main button{
+    width: 78px;
+    height: 24px;
+    top: 5px;
+    padding-right: 7px;
+    position: relative;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+      
+}
+.header .header-top .main img{
+    position: absolute;
+    left: 60px;
+    top: 5px;
+}
+/* header botton */
+.header .header-bottum {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+    position: relative;  
+}
+.header .header-bottum .main{
+    width: 1170px;
+    height: 38px;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    left: 20px;
+    
+}
+.header .header-bottum .main a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+.header .header-bottum .search{
+    position: relative;
+}
+.header .header-bottum .search input{
+    width: 243px;
+    height: 38px;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    border-radius: 5px;
+}
+.header .header-bottum .search input::placeholder{
+    position: absolute;
+    left: 10px;
+}
+.header .header-bottum .search img{
+    position: absolute;
+    left: 200px;
+    bottom: 23px;
+}
+
+
+/* -------------------------------- */
+/* main */
+.main .container {
+    width: 1305px;
+    height: 781px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .image img{
+    width: 805px;
+    height: 781px;
+}
+
+.main .container .log-in{
+    width: 371px;
+    height: 326px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main .container .log-in .title{
+    font-size: 40px;
+}
+
+.main .container .log-in .form{
+   line-height: 65px;
+}
+.main .container .log-in input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 371px;
+}
+
+.main .container .log-in input ::placeholder{
+    opacity: 0.6;
+}
+.main .container .log-in .submit{
+    margin-top: 15px;
+    width: 371px;
+    height: 188px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .container .log-in .submit .account{
+    
+    height: 188px;
+    border: none;
+    outline: none;
+    background-color: #BD4444;
+    border-radius: 5px;
+    color: white;
+}
+.main .container .log-in .submit .sign{
+    
+    height: 188px;
+    border: 1px solid gray;
+    outline: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(4, 4, 4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.main .container .log-in .submit p{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.main .container .log-in .submit p  a{
+    color: black;
+    text-decoration: none;
+}
+
+/* ------------------------------ */
+/* footer */
+.footer{
+    width: 1440px;
+    height: 440px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+}
+.footer .main-top{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+/* exclusive */
+.footer .main-top .exclusive{
+    width: 217px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .main-top .exclusive span{
+    position: relative;
+}
+.footer .main-top .exclusive input{
+    height: 48px;
+    width: 217px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid white;
+    background-color: black;
+}
+.footer .main-top input::placeholder{
+    position: absolute;
+    left: 20px;
+    font-size: 16px;
+}
+.footer .main-top .exclusive img{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+/* support */
+.footer .main-top .support{
+    width: 175px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* acount */
+.footer .main-top .account{
+    width: 123px;
+    height: 236px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* quick */
+.footer .main-top .quick{
+    width: 109px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .main-top .download{
+    width: 198px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer .main-top .download p{
+    font-size: 13px;
+}
+.footer .main-top .download .app{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    gap: 10px;
+   
+}
+
+.footer .main-top .download .app .app-2{
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+}    
+.footer .main-top .download .social .fb-ins{
+    width: 168px;
+    height: 24px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+/* ----------------------footer bottum------- */
+.footer .main-bottum{
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0.5;
+    border-top: 1px solid gray;
+}
