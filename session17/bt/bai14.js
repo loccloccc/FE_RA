@@ -1,0 +1,12 @@
+let r, h;
+r = Number(prompt("nhập bán kính :"));
+h = Number(prompt("nhập chiều cao :"));
+const PI = 3.14;
+let Sxp = 2 * PI * r * h;
+let Stp = 2 * PI * r * (r + h);
+let V = PI * r*r * h;
+let Cday = 2 * PI * r;
+document.write("Diện tích xung quanh hình trụ", Sxp.toFixed(2), "<br>");
+document.write("Diện tích toàn phần hình trụ", Stp.toFixed(2), "<br>");
+document.write("Thể tích hình trụ", V.toFixed(2), "<br>");
+document.write("Chu vi đáy hình trụ", Cday.toFixed(2), "<br>");
