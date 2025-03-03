@@ -1,0 +1,2 @@
+let numb = Number(prompt("mời bạn nhập số "));
+let check = (numb % 3 == 0 && numb % 3 == 0 ) ? document.write("số" , numb , "chia hết cho cả 3 và 5") :document.write("số" , numb , "không chia hết cho cả 3 và 5");
