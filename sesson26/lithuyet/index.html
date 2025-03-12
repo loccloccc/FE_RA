@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            các hàm nâng cao trong js
+            1.filter()  : lọc
+            2.map()
+            3.forEach()
+            4.reduce()
+            5.find()
+            6.findIndex()
+            7.some()
+            8.every()
+            
+
+            QUAN TÂM 
+            1. đầu vào 
+            2. đầu ra
+                - kết quả khi sử dụng phương thứcthức
+        */
+       //2 cái chính
+       //1.filter : lọc , tạo ra một mảng mới 
+       /*
+        đầu vào nhận 1 hàm 
+        đầu ra trả về 1 mảng 
+        -[chứa phần tử]
+        -[]
+        */
+    //    let num = [1,2,3,4,5,6,7,8];
+    //  let res =  num.filter(
+    //     function sayHello(item, index,arr){
+    //         return item > 2;
+    //     }
+    //    );
+    //    console.log(res);
+    /* phương thứ reduce :*/
+    /* 
+    ddaauf vào nhận vào : hàm , giá trị khởi tạo
+    -thường dunngf để tính toán các giá trị phần tử trong mảng 
+    */
+   //accumulator: biến tích lũy
+    let number = [1,2,3,4,5,6,7,8,9,10,11,12];
+    let res = number.reduce((acc,item,arr)=>{
+        return acc + item;
+    },0)
+    console.log(res);
+    
+    </script>
+</body>
+</html>
