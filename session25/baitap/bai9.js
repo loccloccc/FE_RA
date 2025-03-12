@@ -6,7 +6,7 @@ function checkEmain(str) {
   if (str.includes("@")) {
     check1++;
   }
-  if (str.includes(".com") || a.includes(".vn")) {
+  if (str.endsWidth(".com") || a.endsWidth(".vn")) {
     check2++;
   }
   if (check1 != 0 && check2 != 0) {
