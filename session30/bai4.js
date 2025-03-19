@@ -61,7 +61,7 @@ function Menucourse() {//menu quản lí khóa học
 4.Thoát.`));
 }
 
-function UserManagement() {// quản lí người dùng________________________________________chưa xong
+function UserManagement() {
     let t = true;
     while (t) {
         let choice = Menuuser();

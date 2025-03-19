@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           text-align: center;
+           background-color: black;
+           color: white;
+        }
+        .title{
+            text-align: center;
+           background-color: white;
+           color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">Toggle Dark/Light Mode</h1>
+        <p class="p">Click the button to toggle dark and light mode for this page</p>
+        <button  class="btn">Toggle dark mode</button>
+        <script>
+            document.getElementsByClassName("btn")[0].addEventListener("click",()=>{
+                document.getElementsByClassName("container")[0].classList.toggle("title");
+
+            })
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 0px auto;
+            position: relative;
+        }
+        .container form{
+            position: absolute;
+            left: 10px;
+            line-height: 29px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label for="user">username:</label>
+            <input type="text" name="user" id="user">
+            <label for="pass">password:</label>
+            <input type="password" name="pass" id="pass">
+            <button type="button" onclick="btn()">login</button>
+        </form>
+    </div>
+    <script>
+        //ham nhap 
+        function btn(){
+            let user = "huanrose@gmail.com";
+            let pass = "123456";
+            let userNameInput = document.getElementById("user").value;
+            let passWordInput = document.getElementById("pass").value;
+            let chekUser = user.includes(userNameInput);
+            let chekPass = pass.includes(passWordInput);
+            if(chekUser === true && chekPass === true){
+                console.log("đang nhập thành công");
+            }else{
+                console.log("đăng nhập không thành công");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

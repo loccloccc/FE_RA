@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="text" type="text" placeholder="nhập tên món ăn" value="banh bao">
+    <button onclick="add()">thêm món ăn</button>
+    <ol >
+        <!-- <li>Bánh Bao</li>
+        <li>Bánh Mì</li>
+        <li>Bánh Chưng</li> -->
+    </ol>
+    <script>
+        let arr = [];
+        //hien thi cac mon an ra ngoai trinh duyet
+        function render(){
+            let text ="";
+            for(let i = 0 ; i < arr.length ; i++){
+                text+=`<li>${arr[i]}</li>`;
+            }
+            document.getElementsByTagName("ol")[0].innerHTML=text;
+        }
+        // render();        
+        function add(){
+            //lay ten mon an nguoi dung nhap 
+            let name = document.getElementById("text").value;
+            arr.push(name);
+            render(); 
+            document.getElementById("text").value="";
+        }
+    </script>
+</body>
+</html>

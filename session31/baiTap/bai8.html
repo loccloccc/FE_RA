@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bai7.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2 style="margin: 5px">My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Title..." />
+      <span class="addBtn"  onclick="addData()">Add</span>
+    </div>
+
+    <ul id="myUL">
+      <i class="fa-solid fa-check"></i>
+      <!-- dữ liệu mẫu ko được sử dụng  -->
+      <!-- <li class="checked">Pay bills</li> -->
+      <i class="fa-solid fa-xmark"></i>
+    </ul>
+    <script>
+        //mang để lưu giũ 
+        let toList = [
+        {id:1,task:"Hit the gym",completed:false},
+        {id:2,task:"Pay bill",completed:true},
+        {id:3,task:"Meet geogre",completed:false},
+        {id:4,task:"Buy eggs",completed:false},
+        {id:5,task:"Read a book",completed:false},
+        {id:6,task:"Organize office",completed:false},
+        ];
+        function printData(){
+            let text = "";
+            for(let i = 0 ; i < toList.length ; i++){
+                text +=`<li>${toList[i].task}</li>`;
+            }
+            document.getElementById("myUL").innerHTML=text;
+        }
+        //lay ten du lieu nguoi dung dang nhap
+        function addData(){
+            let data = document.getElementById("myInput").value;
+            let newToList = {
+                    id:toList.length+1,
+                    task : data,
+                    completed:Math.random() < 0.5 ? false : true ,};
+            toList.push(newToList);
+            printData();
+            document.getElementById("myInput").value="";
+        }
+        printData();
+    </script>
+  </body>
+</html>
