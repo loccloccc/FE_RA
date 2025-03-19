@@ -1,49 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="bai7.css" />
-  </head>
-  <body>
-    <div id="myDIV" class="header">
-      <h2 style="margin: 5px">My To Do List</h2>
-      <input type="text" id="myInput" placeholder="Title..." />
-      <span class="addBtn"  onclick="addData()">Add</span>
+    <style>
+        body { margin: 0; min-width: 250px; }
+        * { box-sizing: border-box; }
+        ul { margin: 0; padding: 0; }
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+            user-select: none;
+        }
+        ul li:nth-child(odd) { background: #f9f9f9; }
+        ul li:hover { background: #ddd; }
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+        ul li.checked::before {
+            content: ''; position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px; left: 16px;
+            transform: rotate(45deg);
+            height: 15px; width: 7px;
+        }
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px;
+            cursor: pointer;
+        }
+        .close:hover { background-color: #f44336; color: white; }
+        .header {
+            background-color: #f44336;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+        }
+        input {
+            width: 75%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+        }
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .addBtn:hover { background-color: #bbb; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2 style="margin: 5px">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span class="addBtn" onclick="addData()">Add</span>
     </div>
-
-    <ul id="myUL">
-      <!-- dữ liệu mẫu ko được sử dụng  -->
-      <!-- <li class="checked">Pay bills</li> -->
-    </ul>
+    <ul id="myUL"></ul>
     <script>
-        //mang để lưu giũ 
-        let toList = [
-        {id:1,task:"Hit the gym",completed:false},
-        {id:2,task:"Pay bill",completed:true},
-        {id:3,task:"Meet geogre",completed:false},
-        {id:4,task:"Buy eggs",completed:false},
-        {id:5,task:"Read a book",completed:false},
-        {id:6,task:"Organize office",completed:false},
+        let toList = JSON.parse(localStorage.getItem("toList")) || [
+            {id: 1, task: "Hit the gym", completed: false},
+            {id: 2, task: "Pay bill", completed: true},
+            {id: 3, task: "Meet George", completed: false},
+            {id: 4, task: "Buy eggs", completed: false},
+            {id: 5, task: "Read a book", completed: false},
+            {id: 6, task: "Organize office", completed: false}
         ];
-        function printData(){
-            let text = "";
-            for(let i = 0 ; i < toList.length ; i++){
-                text +=`<li>${toList[i].task}</li>`;
-            }
-            document.getElementById("myUL").innerHTML=text;
+
+        function saveData() {
+            localStorage.setItem("toList", JSON.stringify(toList));
         }
-        //lay ten du lieu nguoi dung dang nhap
-        function addData(){
+
+        function printData() {
+            let list = "";
+            toList.forEach((item, index) => {
+                list += `<li class="${item.completed ? 'checked' : ''}" onclick="toggleComplete(${index})">
+                            ${item.task} 
+                            <span class="close" onclick="removeTask(event, ${index})">&times;</span>
+                         </li>`;
+            });
+            document.getElementById("myUL").innerHTML = list;
+        }
+
+        function addData() {
             let data = document.getElementById("myInput").value;
-            let newToList = {
-                    id:toList.length+1,
-                    task : data,
-                    completed:Math.random() < 0.5 ? false : true ,};
-            toList.push(newToList);
+            if (!data.trim()) return;
+            toList.push({ id: toList.length + 1, task: data, completed: false });
+            saveData();
             printData();
-            document.getElementById("myInput").value="";
+            document.getElementById("myInput").value = "";
         }
+
+        function toggleComplete(index) {
+            toList[index].completed = !toList[index].completed;
+            saveData();
+            printData();
+        }
+
+        function removeTask(event, index) {
+            event.stopPropagation(); // Prevent marking as completed when deleting
+            toList.splice(index, 1);
+            saveData();
+            printData();
+        }
+
         printData();
     </script>
-  </body>
+</body>
 </html>
