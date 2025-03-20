@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <img onclick="img(this)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEcOYN57DOwU0mvfwhTxAQndvPHeKOnM67dg&s" alt="">
+    <img onclick="img(this)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEcOYN57DOwU0mvfwhTxAQndvPHeKOnM67dg&s" alt="">
+    <img onclick="img(this)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEcOYN57DOwU0mvfwhTxAQndvPHeKOnM67dg&s" alt="">
+
+    <script>
+        function img(a) {
+            if (a.style.width === "100%") {
+                a.style.width = "20%";
+                a.style.height = "20%";
+                console.log("Thu nhỏ:", a);
+            } else {
+                a.style.width = "100%";
+                a.style.height = "100%";
+                console.log("Phóng to:", a);
+            }
+        }
+    </script>
+</body>
+</html>

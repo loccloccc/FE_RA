@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body{
+            opacity: 1;
+        }
+        .add{
+            width: 100px;
+            height: 30px;
+            background-color: rgb(0, 255, 47);
+            border: none;
+        }
+        .remove{
+            width: 100px;
+            height: 30px;
+            background-color: rgb(167, 39, 39);
+            border: none;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grey{
+            width: 700px;
+            height: 50px;
+            background-color: rgb(201, 201, 201);
+            border-radius: 10px;
+            position: relative;
+        }
+        .green{
+            width: 20%;
+            height: 50px;
+            background-color: rgb(0, 176, 0);
+            position: absolute;
+            left: 0px;
+            border-radius: 10px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Progress Bar With Background Effect</h1>
+            <div class="grey">
+                <div class="green"></div>
+            </div>
+            <span>
+                <button class="add" >Tăng tiến trình</button>
+                <button class="remove">Giảm tiến trình</button>
+            </span>
+        </div>
+        <script>
+            let count = 20 , op = 1 ;
+            document.getElementsByClassName("add")[0].addEventListener("click", () => {
+                if(count<100){
+                    count+=5;
+                    op+=0.1;
+                    document.getElementsByClassName("green")[0].style.width= count + "%";
+                    document.getElementsByTagName("body")[0].style.opacity = op;
+                }
+            });
+            document.getElementsByClassName("remove")[0].addEventListener("click", () => {
+                if(count>=0){
+                    count-=5;
+                    op-=0.1;
+                    document.getElementsByClassName("green")[0].style.width = count + "%";
+                    document.getElementsByTagName("body")[0].style.opacity = op;
+                }
+            });
+        </script>
+    </body>
+</html>

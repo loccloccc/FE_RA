@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+33<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,20 +8,20 @@
 <body>
     <input id="text" type="text" placeholder="nhập tên món ăn" value="banh bao">
     <button onclick="add()">thêm món ăn</button>
-    <ol >
+    <div >
         <!-- <li>Bánh Bao</li>
         <li>Bánh Mì</li>
         <li>Bánh Chưng</li> -->
-    </ol>
+    </div>
     <script>
         let arr = [];
         //hien thi cac mon an ra ngoai trinh duyet
         function render(){
             let text ="";
             for(let i = 0 ; i < arr.length ; i++){
-                text+=`<li>${arr[i]}</li>`;
+                text+=`<div>${arr[i]}</div>`;
             }
-            document.getElementsByTagName("ol")[0].innerHTML=text;
+            document.getElementsByTagName("div")[0].innerHTML=text;
         }
         // render();        
         function add(){

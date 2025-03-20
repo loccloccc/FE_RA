@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="email" id="email" placeholder="user@gmail.com" value="">
+    <p class="a">email hợp lệ!</p>
+    <p class="b">email không hợp lệ!</p>
+    <button class="btn">check</button>
+    <script>
+        function add(){
+            let str = "";
+            document.getElementById("email").innerHTML=str;
+        }
+        document.getElementsByClassName("btn")[0].addEventListener("click",()=>{
+            let name = document.getElementById("email").value;
+            let flag = 0 ;
+            if(name.includes("@") && ( name.endsWith(".com") || name.endsWith(".vn"))){
+                flag++;
+            }
+            if(flag==0){
+                document.getElementsByClassName("b")[0].style.display = "block";
+                document.getElementsByClassName("b")[0].style.color = "red";
+            }else{
+                document.getElementsByClassName("a")[0].style.display="block";
+                document.getElementsByClassName("a")[0].style.color="green";
+            }
+        })
+        
+    </script>
+</body>
+</html>
