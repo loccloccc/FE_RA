@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        input{
+            width: 30%;
+            height: 30px;
+            border-radius: 10px;
+            outline: none;
+            position: relative;
+        }
+        input::placeholder{
+            position: absolute;
+            left: 20px;
+        }
+        i{
+            position: absolute;
+            left: 28%;
+            top: 17px;
+        }
+        /* .close{
+            position: absolute;
+            left: 28%;
+            top: 17px;
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <label for=""></label>
+    <input class="input" type="text" value="" id="text" placeholder="pass_word">
+    <i class="fa-solid fa-eye " onclick="btn()"></i>
+    <!-- <i class="fa-solid fa-eye-slash"></i> -->
+    <script>
+        function btn(){
+            let element = document.getElementsByClassName("input")[0];
+            if(element.type == "text"){
+                element.type="password";
+                document.getElementsByClassName("fa-solid")[0].classList.add("fa-eye-slash");
+                document.getElementsByClassName("fa-solid")[0].classList.remove("fa-eye");
+            }else{
+                element.type="text";
+                document.getElementsByClassName("fa-solid")[0].classList.add("fa-eye");
+                document.getElementsByClassName("fa-solid")[0].classList.remove("fa-eye-slash");
+            }
+            
+        }
+    </script>
+</body>
+</html>

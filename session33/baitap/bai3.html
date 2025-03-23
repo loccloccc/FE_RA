@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>
+        <select name="" id="dish" onclick="choice()">
+            <option value="showall">---Lựa chọn danh mục---</option>
+            <option value="do an">---Do an---</option>
+            <option value="do uong">---Do uong---</option>
+            <option value="dung cu">---Dung cu---</option>
+        </select>
+        <button>lọc</button>
+    </span>
+    <ul>
+        <!-- <li></li> -->
+    </ul>
+    <script>
+        let list = [
+            {name:`Rau sach`,category:`do an`},
+            {name:`Thit lon`,category:`do an`},
+            {name:`Pessi khong calo`,category:`do uong`},
+            {name:`Cocacola`,category:`do uong`},
+            {name:`co le`,category:`dung cu`},
+            {name:`tu vit`,category:`dung cu`},
+        ];
+        function printList(a){
+            let text = "";
+            for(let i = 0 ; i < a.length ; i++){
+                text += `<li> ${a[i].name} </li>`;
+            }
+            document.getElementsByTagName("ul")[0].innerHTML=text;
+        }
+        //printList(list);
+        function choice(){
+            let a = document.getElementById("dish").value;
+            let res = list.filter(i => i.category == a);
+            if(res.length==0){
+                printList(list);
+            }else{
+                printList(res);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="note"></textarea>
+    <p>kí tự</p>
+    <button onclick="btn()">kiểm tra</button>
+    <script>
+        function btn(){
+            let count = document.getElementById("note").value.length;
+            document.getElementsByTagName("p")[0].innerHTML = count + `ki tu `;
+        }
+    </script>
+</body>
+</html>
