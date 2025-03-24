@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 30%;
+            height: auto;
+            margin: 10px auto;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container .input{
+            width: 95%;
+            height: 30px;
+            margin: 0 auto;
+        }
+        .container .input input{
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+        }
+        .container .input input::placeholder{
+            padding-left: 10px;
+        }
+        .container .input button{
+            width: 19%;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+        }
+        .container .content{
+            width: 95%;
+            margin: 5px auto;
+        }
+        .contentSmall{
+            display: flex;
+            justify-content: space-between;
+        }
+        .contentSmall span{
+            font-size: 20px;
+        }
+        .contentSmall button{
+            width: 50px;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="input">
+            <input type="text" name="" id="text" placeholder="Thêm việc cần làm...">
+            <button onclick="btn()">Thêm</button>
+        </div>
+        <div class="content">
+            <!-- Nội dung công việc sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+
+    <script>
+        let arrWork = JSON.parse(localStorage.getItem("work")) || ["hoc", "ăn"];
+        function render() {
+            let str = "";
+            for (let i = 0; i < arrWork.length; i++) {
+                str += `
+                <div class="contentSmall">
+                    <span>${arrWork[i]}</span>
+                    <button onclick="close(${i})">xóa</button>
+                </div>
+                <hr>   
+                `;
+            }
+            document.getElementsByClassName("content")[0].innerHTML = str;
+        }
+        render();
+        function btn() {
+            let add = document.getElementById("text").value;
+            if (add == "") {
+                alert("Vui lòng nhập công việc!");
+                return;
+            }
+            arrWork.push(add);
+            localStorage.setItem("work", JSON.stringify(arrWork));
+            document.getElementById("text").value = "";
+            render();
+        }
+        function close(i) {
+            arrWork.splice(i, 1);
+            localStorage.setItem("work", JSON.stringify(arrWork));
+            render();
+        }
+    </script>
+</body>
+</html>

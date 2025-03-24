@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 50%;
+            border: 1px solid black;
+            height: 200px;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        .creat{
+            margin-left: 15px;
+        }
+        .creat input:nth-last-of-type(1){
+            width: 20%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        .creat input:nth-last-of-type(1)::placeholder{
+            padding-left: 10px;
+        }
+        .creat input:nth-last-of-type(2){
+            width: 15%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        .creat input:nth-last-of-type(3){
+            width: 30%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        .creat input:nth-last-of-type(3)::placeholder{
+            padding-left: 10px;
+        }
+        .creat button{
+            width: 10%;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(84, 84, 255);
+            color: white;
+        }
+        select{
+            width: 20%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        .buttonFixandClose{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management</h1>
+        <div class="creat">
+            <input type="text" name="" id="content" placeholder="Content">
+            <input type="date" name="" id="date">
+            <select name="" id="selec">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <input type="text" name="" id="name" placeholder="Username">
+            <button onclick="btnClick()">Submit</button>
+        </div>
+        <table border="1" class="information">
+            <tr>
+                <th>#</th>
+                <th>Content</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Assigned to</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let couse = JSON.parse(localStorage.getItem("couse")) || [
+            {
+                id: 1,
+                content: "Learn Javascript session 01",
+                dueDate: "2023-04-17",
+                status: "Pending",
+                assignedTo: "Anh Bách"
+            },
+            {
+                id: 2,
+                content: "Learn Javascript session 02",
+                dueDate: "2023-04-17",
+                status: "Pending",
+                assignedTo: "Lâm"
+            },
+            {
+                id: 3,
+                content: "Learn CSS session 01",
+                dueDate: "2023-04-17",
+                status: "Pending",
+                assignedTo: "Hiếu"
+            }
+        ];
+        function render() {
+            let str = "";
+            for (let i = 0; i < couse.length; i++) {
+                str += `
+                    <tr>
+                        <td>${couse[i].id}</td>
+                        <td>${couse[i].content}</td>
+                        <td>${couse[i].dueDate}</td>
+                        <td>${couse[i].status}</td>
+                        <td>${couse[i].assignedTo}</td>
+                        <td class="buttonFixandClose">
+                            <button onclick="editTask(${couse[i].id})">Sửa</button>
+                            <button onclick="deleteTask(${couse[i].id})">Xóa</button>
+                        </td>
+                    </tr>
+                `;
+            }
+            document.getElementsByClassName("information")[0].innerHTML = str;
+        }
+        render();
+        function btnClick() {
+            let content = document.getElementById("content").value;
+            let date = document.getElementById("date").value;
+            let selec = document.getElementById("selec").value;
+            let name = document.getElementById("name").value;
+            if (content === "" || name === "" || selec === "") {
+                alert("Bạn nhập thiếu hoặc không đúng");
+                return;
+            }
+            couse.push({
+                id: couse.length + 1,
+                content: content,
+                dueDate: date,
+                status: selec,
+                assignedTo: name
+            });
+            localStorage.setItem("couse", JSON.stringify(couse));
+            document.getElementById("content").value = "";
+            document.getElementById("date").value = "";
+            document.getElementById("selec").value = "Pending";
+            document.getElementById("name").value = "";
+
+            render();
+        }
+        function deleteTask(id) {
+            couse = couse.filter(task => task.id !== id);
+            localStorage.setItem("couse", JSON.stringify(couse));
+            render();
+        }
+        function editTask(id) {
+            const task = couse.find(task => task.id === id);
+            if (task) {
+                document.getElementById("content").value = task.content;
+                document.getElementById("date").value = task.dueDate;
+                document.getElementById("selec").value = task.status;
+                document.getElementById("name").value = task.assignedTo;
+                deleteTask(id);
+            }
+        }
+    </script>
+</body>
+</html>
