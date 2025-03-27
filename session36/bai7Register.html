@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+                padding: 0;
+                margin: 0;
+            }
+        .container-register{
+            width: 20%;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container-register h1{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .container-register input{
+            width: 90%;
+            height: 25px;
+            margin: 10px;   
+        }
+        .container-register button{
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+        }
+        .container-register a{
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- đăng kí -->
+     <div class="container-register">
+        <h1>Đăng kí</h1><br>
+        <input type="text" name="user" id="text-register" placeholder="Tên đăng nhập"><br>
+        <input type="pass" name="password" id="pass-register" placeholder="Mật khẩu"><br>
+        <button onclick="register()">Đăng kí</button><br>
+        <a href="./bai7LogIn.html">Quay lại đăng nhập</a><br>
+     </div>
+     <script>
+        //tạo mảng chứa danh sách user và lấy danh sách trên local
+        let userList = JSON.parse(localStorage.getItem("userList"))||[{userName:"loc",pass:"1234"}];
+        //lấy dữ liệu ngdung nhập
+        function register(){
+            let userName = document.getElementById("text-register").value.trim().toLowerCase();
+            let pass = document.getElementById("pass-register").value.trim().toLowerCase();
+            if(userName.length == 0 || pass.length == 0 ){
+                alert("hãy nhập đầy đủ thông tin");
+                return;
+            }
+            //kiểm tra  tài khoản
+            let check = userList.filter(i => i.userName == userName);
+            if(check!=0){
+                alert("tên tài khoản đã tồn tại , mời bạn nhập lại");
+                return;
+            }
+            else{
+                let account = {userName:userName ,pass:pass};
+                userList.push(account);
+                localStorage.setItem("userList",JSON.stringify(userList));
+                document.getElementById("text-register").value="";
+                document.getElementById("pass-register").value="";
+            }
+            window.location.href="./bai7Login.html";
+        }
+
+     </script>
+</body>
+</html>

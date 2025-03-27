@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 25%;
+            height: 150px;
+            border: 1px solid gray;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-radius: 5px; 
+        }
+        h1{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .input {
+            text-align: center;
+        }
+        .input input{
+            width: 60%;
+            height: 30px;
+        }
+        .input button{
+            width: 20%;
+            height: 35px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nhập tên của bạn</h1>
+        <div class="input">
+            <input type="text" name="" id="text" placeholder="nhập tên">
+            <button onclick="save()">Lưu</button>
+        </div>
+        <div class="print">
+            <h1 class="text">🫡Chào bạn</h1>
+            <button onclick="doiten()">Đổi tên</button>
+        </div>  
+    </div>
+    <script>
+        //lưu
+        function save() {
+            let name = document.getElementById("text").value;
+            localStorage.setItem("name",name);
+            document.getElementsByClassName("text")[0].innerHTML = `🫡Chào bạn`+ name;
+            document.getElementById("text").value = "";
+        }
+        //hiện
+        function show(){
+            let name = localStorage.getItem("name");
+            document.getElementsByClassName("text")[0].innerHTML = `🫡Chào bạn`+name ;
+        }
+        show();
+        //đổi tên
+        function doiten(){
+            let name = localStorage.getItem("name");
+            document.getElementById("text").value=name;
+        }
+    </script>
+</body>
+</html>

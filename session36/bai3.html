@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 60px;
+            height: 30px;
+        }
+        button:nth-child(1){
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+        }
+        button:nth-child(2){
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+        }
+        button:nth-child(3){
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+        }
+        button:nth-child(4){
+            background-color: violet;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chọn màu nền yêu thích</h1>
+        <div class="select">
+            <button onclick="red()">Đỏ</button>
+            <button onclick="green()">Xanh</button>
+            <button onclick="yewlow()">Vàng</button>
+            <button onclick="violet()">Tím</button>
+        </div>
+    </div>
+    <script>
+        let a =localStorage.getItem("bg")||"white";
+        document.getElementsByTagName("body")[0].style.backgroundColor = a;
+        function red(){
+            let c = document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+            localStorage.setItem("bg",c);
+        }
+        function green(){
+            let d = document.getElementsByTagName("body")[0].style.backgroundColor = "green";
+            localStorage.setItem("bg",d);
+        }
+        function yewlow(){
+            let e = document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
+            localStorage.setItem("bg",e);
+        }
+        function violet(){
+            let b = document.getElementsByTagName("body")[0].style.backgroundColor = "violet";
+            localStorage.setItem("bg",b);
+        }
+    </script>
+</body>
+</html>
